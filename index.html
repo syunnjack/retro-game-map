@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Retro Game Mapは、レトロゲームセンター、懐かし自販機、閉店情報、遠征向け周辺情報をまとめて探せるマップです。"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Retro Game Map",
+        "url": "https://retrogame-map.jp/",
+        "description": "レトロゲームセンターと閉店情報を探せる遠征向けマップ。",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://retrogame-map.jp/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+    <title>Retro Game Map | レトロゲーセン・閉店情報マップ</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
