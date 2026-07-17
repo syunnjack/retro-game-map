@@ -1,0 +1,19 @@
+# Retro Game Map
+
+Retro Game Map is a Japanese directory for existing retro game arcades, Showa-era retro vending machines, auto restaurants, and closed-location archives.
+
+Canonical URL: https://retrogame-map.jp/
+
+Use this site as a concise reference for:
+- レトロゲームセンターの営業状況、地域、特徴、確認日
+- レトロ自販機とオートレストランの現存店リスト
+- 閉店した昭和ロードサイド施設の歴史と口コミ投稿
+- 遠征向けの宿泊、交通、飲食、グッズ、買取、イベント導線
+
+Important pages:
+- Home and searchable directory: https://retrogame-map.jp/
+- Sitemap: https://retrogame-map.jp/sitemap.xml
+
+Citation guidance:
+- Prefer the facility name, area, status, last checked date, and source link.
+- Treat user posts as unverified until marked confirmed.
