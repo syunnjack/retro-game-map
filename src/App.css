@@ -8,6 +8,7 @@
 .hero,
 .search-panel,
 .summary-grid,
+.history-section,
 .content-grid {
   width: min(1180px, calc(100% - 36px));
   margin: 0 auto;
@@ -48,6 +49,7 @@
 .feature-card,
 .search-panel,
 .summary-grid article,
+.auto-card,
 .arcade-card,
 .side-panel {
   border: 1px solid rgba(31, 29, 27, 0.12);
@@ -136,6 +138,67 @@ button {
 .summary-grid strong {
   font-size: 30px;
   line-height: 1;
+}
+
+.history-section {
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  margin: 4px 0 0;
+  font-size: 28px;
+  letter-spacing: 0;
+}
+
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.auto-card {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+}
+
+.auto-card h3 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.auto-card p,
+.review-note {
+  margin: 0;
+  color: #514c47;
+  line-height: 1.68;
+}
+
+.auto-card ol {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 21px;
+  color: #514c47;
+  line-height: 1.55;
+}
+
+.review-note {
+  border-left: 4px solid #b53f31;
+  border-radius: 6px;
+  background: #fff7f3;
+  padding: 10px 12px;
+}
+
+.source-link,
+.source-list a {
+  color: #286456;
+  font-weight: 800;
 }
 
 .content-grid {
@@ -275,6 +338,22 @@ button {
   min-height: 92px;
 }
 
+.source-list {
+  display: grid;
+  gap: 8px;
+  border-top: 1px solid rgba(31, 29, 27, 0.1);
+  padding-top: 14px;
+}
+
+.source-list h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.source-list a {
+  line-height: 1.45;
+}
+
 .node {
   display: grid;
   place-items: center;
@@ -323,6 +402,7 @@ button {
 
   .search-panel,
   .summary-grid,
+  .auto-grid,
   .support-grid {
     grid-template-columns: 1fr;
   }

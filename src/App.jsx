@@ -112,6 +112,58 @@ const arcades = [
   },
 ]
 
+const autoRestaurants = [
+  {
+    id: 'marumiya',
+    name: '丸美屋自販機コーナー',
+    area: '群馬',
+    status: '営業中',
+    era: '昭和型ロードサイド自販機文化の現存例',
+    timeline: [
+      '昭和後期: 幹線道路沿いの休憩・食事スポットとして自販機コーナー文化が広がる',
+      '2026年7月: 現役稼働リストに掲載。Yahoo!マップでも24時間営業・レビュー評価が確認できる',
+    ],
+    review: 'Yahoo!マップで4.1、53件の総合評価。うどん・トースト・ラーメンなどの体験レビューが多い。',
+    sourceUrl: 'https://map.yahoo.co.jp/v3/place/eCBBtYnb45g/review',
+  },
+  {
+    id: 'shioya',
+    name: 'オートパーラーシオヤ',
+    area: '千葉',
+    status: '営業中',
+    era: '成田周辺の現存レトロ自販機スポット',
+    timeline: [
+      '昭和後期: オートレストラン型のロードサイド需要を背景に類似業態が各地に展開',
+      '2026年7月: 現役稼働リストに掲載。遠征先として確認対象',
+    ],
+    review: '現地訪問前に最新口コミと営業時間確認が必要。自販機巡りの定番候補として扱う。',
+    sourceUrl: 'https://jihanki.michikusa.jp/',
+  },
+  {
+    id: 'tekkentaro',
+    name: 'オートレストラン鉄剣タロー',
+    area: '埼玉',
+    status: '閉店',
+    era: '昭和63年開業、レトロ自販機の聖地的存在',
+    timeline: [
+      '1988年7月: 国道17号熊谷バイパス沿いに開業',
+      '2020年4月: 新型コロナ対応で臨時休業',
+      '2020年5月31日: 32年間の営業に幕',
+      '2023年以降: 跡地・継承店のレビューが投稿され、記憶のアーカイブ対象になる',
+    ],
+    review: '食べログ旧店舗ページは閉店扱いで37件のレビュー。閉店後の関連食堂にも訪問レビューが残る。',
+    sourceUrl: 'https://kumagaya.keizai.biz/headline/717/',
+  },
+]
+
+const sourceLinks = [
+  { label: '昭和レトロ自販機 稼働状況＆閉店マップ', url: 'https://jihanki.michikusa.jp/' },
+  { label: '熊谷経済新聞 鉄剣タロー閉店記事', url: 'https://kumagaya.keizai.biz/headline/717/' },
+  { label: '埼玉新聞 鉄剣タロー閉店詳細', url: 'https://www.saitama-np.co.jp/articles/4833/postDetail' },
+  { label: 'Yahoo!マップ 丸美屋口コミ', url: 'https://map.yahoo.co.jp/v3/place/eCBBtYnb45g/review' },
+  { label: '食べログ 鉄剣タロー旧店舗', url: 'https://tabelog.com/en/saitama/A1104/A110403/11039199/' },
+]
+
 function readSaved() {
   try {
     return JSON.parse(localStorage.getItem(savedKey)) ?? {}
@@ -226,6 +278,32 @@ function App() {
         </article>
       </section>
 
+      <section className="history-section" aria-label="昭和オートレストラン時系列">
+        <div className="section-heading">
+          <span className="brand">Auto restaurant archive</span>
+          <h2>昭和から続くオートレストランの現存・閉店アーカイブ</h2>
+        </div>
+        <div className="auto-grid">
+          {autoRestaurants.map((place) => (
+            <article className="auto-card" key={place.id}>
+              <div className="card-top">
+                <span className={`status ${statusClass(place.status)}`}>{place.status}</span>
+                <span className="checked">{place.area}</span>
+              </div>
+              <h3>{place.name}</h3>
+              <p>{place.era}</p>
+              <ol>
+                {place.timeline.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ol>
+              <div className="review-note">{place.review}</div>
+              <a className="source-link" href={place.sourceUrl} target="_blank" rel="noreferrer">参照元を見る</a>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="content-grid">
         <div className="arcade-list" aria-label="施設一覧">
           {displayArcades.map((arcade) => (
@@ -276,6 +354,12 @@ function App() {
             <span className="node arcade">施設</span>
             <span className="line" />
             <span className="node stay">宿</span>
+          </div>
+          <div className="source-list">
+            <h3>参照リンク</h3>
+            {sourceLinks.map((source) => (
+              <a href={source.url} key={source.url} target="_blank" rel="noreferrer">{source.label}</a>
+            ))}
           </div>
         </aside>
       </section>
