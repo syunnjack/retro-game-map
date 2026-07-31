@@ -11,7 +11,7 @@ Retro Game Mapは、レトロゲームセンター、懐かし自販機、ゲー
 
 ## Suggested Domain
 
-- `retrogame-map.jp`
+- `https://syunnjack.github.io/retro-game-map/`
 - `gesen-navi.jp`
 - `arcade-log.jp`
 
