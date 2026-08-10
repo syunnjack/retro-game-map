@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://retrogame-map.jp/sitemap.xml
+Sitemap: https://retro-game-map.vercel.app/sitemap.xml
