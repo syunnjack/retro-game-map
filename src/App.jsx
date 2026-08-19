@@ -21,7 +21,6 @@ const facilities = [
     sourceUrl: 'https://royalgamecenter.com/en/',
     features: ['80-90年代中心', '全台レトロ筐体', '大阪駅前第3ビル'],
     note: '公式サイトでレトロゲーム専門店として案内。スペースハリアー、グラディウス、ダライアスなど名作筐体の遠征需要が強い。',
-    monetization: '店舗グッズ、周辺ホテル、梅田飲食、海外観光客向けモデルコース広告。',
   },
   {
     id: 'mikado-baba',
@@ -35,7 +34,6 @@ const facilities = [
     sourceUrl: 'https://mi-ka-do.net/',
     features: ['大会', '配信', 'レトロ対戦'],
     note: '大会・配信・レトロタイトルの文化が強く、来店者と配信視聴者の両方をつなげやすい。',
-    monetization: '大会告知枠、配信導線、周辺宿・飲食・交通アフィリエイト。',
   },
   {
     id: 'hey-akihabara',
@@ -49,7 +47,6 @@ const facilities = [
     sourceUrl: 'https://www.taito.co.jp/en/store/topics/00001703/659/4',
     features: ['ビデオゲーム300台超', '稼働情報', '配信'],
     note: '公式ページで300台超のビデオゲームを案内。レトロゲームの王国として紹介される文化もある。',
-    monetization: '秋葉原回遊、レトロショップ送客、稼働ゲーム検索、周辺カフェ広告。',
   },
   {
     id: 'beep-akihabara',
@@ -63,7 +60,6 @@ const facilities = [
     sourceUrl: 'https://www.akihabara-beep.com/',
     features: ['基板販売', '筐体買取', 'レトロPC'],
     note: 'プレイ施設ではなく販売・買取寄りだが、基板・筐体・レトロPC文化の受け皿として重要。',
-    monetization: '買取査定送客、通販導線、基板・筐体販売、修理記事広告。',
   },
   {
     id: 'marumiya',
@@ -77,7 +73,6 @@ const facilities = [
     sourceUrl: 'https://map.yahoo.co.jp/v3/place/eCBBtYnb45g/review',
     features: ['24時間', 'うどん', 'トースト', '口コミ多数'],
     note: 'Yahoo!マップで24時間営業とレビュー評価を確認。現役レトロ自販機の代表候補。',
-    monetization: '地図広告、ガソリンスタンド、ドライブ宿、道の駅、口コミ連動広告。',
   },
   {
     id: 'shioya',
@@ -91,7 +86,6 @@ const facilities = [
     sourceUrl: 'https://jihanki.michikusa.jp/',
     features: ['弁当自販機', 'うどん', '昭和ロードサイド'],
     note: '昭和レトロ自販機の稼働状況リストで現存情報を追いやすい、首都圏から行きやすい施設。',
-    monetization: '成田観光、レンタカー、近隣温浴、ドライブ保険、駐車場広告。',
   },
   {
     id: 'sagamihara-tire',
@@ -105,7 +99,6 @@ const facilities = [
     sourceUrl: 'https://jihanki.michikusa.jp/',
     features: ['台数が多い', '家族向け', '駐車場'],
     note: '多種類の自販機を一度に楽しめる遠征向きスポット。写真投稿と食べ比べ記事で伸ばしやすい。',
-    monetization: 'カー用品、タイヤ交換、レンタカー、家族向け飲食、動画企画スポンサー。',
   },
   {
     id: 'drive-in-daruma',
@@ -119,7 +112,6 @@ const facilities = [
     sourceUrl: 'https://jihanki.michikusa.jp/',
     features: ['ラーメン', 'うどん', 'ゲーム機', '昭和空間'],
     note: 'ロードサイドのオートレストラン文化を残す貴重な施設。時系列記事と遠征ルートで深掘りできる。',
-    monetization: '舞鶴観光、海鮮飲食、宿泊、ドライブプラン、写真集・ZINE販売。',
   },
   {
     id: 'nagasawa-garden',
@@ -132,8 +124,7 @@ const facilities = [
     rating: 4.0,
     sourceUrl: 'https://jihanki.michikusa.jp/',
     features: ['うどん自販機', '宿泊', '温泉'],
-    note: '食事・宿泊・温浴をまとめられるため、滞在型の収益導線に強い。',
-    monetization: '宿泊予約、温泉、交通、山口観光、地域土産の送客。',
+    note: '食事・宿泊・温浴をまとめられるため、滞在して楽しめる。',
   },
   {
     id: 'tekken-taro',
@@ -147,7 +138,6 @@ const facilities = [
     sourceUrl: 'https://kumagaya.keizai.biz/headline/717/',
     features: ['2020年閉店', '昭和自販機', '思い出投稿'],
     note: '2020年に閉店した名店。閉店店の歴史、口コミ、写真投稿を保存するアーカイブの核にできる。',
-    monetization: '閉店アーカイブ広告、思い出レビュー投稿、復刻グッズ、地域回遊記事。',
   },
 ]
 
@@ -158,20 +148,7 @@ const timeline = [
   { year: '2020年代', title: 'SNSと動画で再発見される', text: '昭和レトロ、聖地巡礼、閉店前に行きたい場所としてバズりやすくなり、現存店の稼働確認とUGCが重要になる。' },
 ]
 
-const revenuePlans = [
-  { name: '遠征予約', text: '宿泊、レンタカー、高速バス、航空券、駐車場を施設カードから自然に案内。' },
-  { name: '地域送客', text: '近隣飲食、温浴、道の駅、観光スポットを回遊ルートとして掲載。' },
-  { name: 'グッズ・買取', text: 'レトロゲーム販売、基板買取、復刻ステッカー、写真集、ZINEを導線化。' },
-  { name: '確認済み掲載', text: '店舗向けに営業時間、稼働筐体、告知枠を有料で更新できるプランを用意。' },
-]
 
-const buzzIdeas = [
-  '都道府県別「まだ行ける昭和スポット」ランキング',
-  '閉店前に行きたい店の思い出レビュー募集',
-  '100円で遊べる名作筐体マップ',
-  'レトロ自販機の食べ比べ投稿キャンペーン',
-  '遠征ルートを投稿して宿・交通導線へつなげる',
-]
 
 const faq = [
   ['AIに引用されやすくするには？', '店名、地域、営業状況、確認日、一次情報リンク、口コミ要約を短く構造化して掲載します。'],
@@ -233,7 +210,7 @@ function App() {
           <span className="brand">Retro Game Map</span>
           <h1>現存するレトロゲームと昭和自販機を、閉店史ごと探せる地図。</h1>
           <p>
-            レトロゲームセンター、オートレストラン、レトロ自販機、閉店した名店の記録を横断検索。UGCで最新状況を集め、遠征予約・地域送客・グッズ販売へつなげます。
+            レトロゲームセンター、オートレストラン、レトロ自販機、閉店した名店の記録を横断検索。UGCで最新状況を集め、遠征の計画に使える形でまとめています。
           </p>
         </div>
         <aside className="feature-card">
@@ -296,7 +273,7 @@ function App() {
         <div>
           <span className="brand">Directory</span>
           <h2>現存店・閉店店リスト</h2>
-          <p>公式情報、稼働状況、口コミ、遠征時の収益導線を施設ごとにまとめます。</p>
+          <p>公式情報、稼働状況、口コミを施設ごとにまとめます。</p>
         </div>
         <div className="content-grid">
           {filtered.map((item) => (
@@ -314,7 +291,6 @@ function App() {
                 <span>{item.station}</span>
                 <strong>{item.rating.toFixed(1)}</strong>
               </div>
-              <p className="monetization">{item.monetization}</p>
               <div className="actions">
                 <a className="source-link" href={item.sourceUrl} target="_blank" rel="noreferrer">出典を見る</a>
                 <button type="button" onClick={() => toggleSaved(item.id)}>
@@ -358,25 +334,6 @@ function App() {
         </div>
       </section>
 
-      <section className="growth-grid">
-        <div className="revenue-panel">
-          <h3>収益導線</h3>
-          <div>
-            {revenuePlans.map((plan) => (
-              <article key={plan.name}>
-                <strong>{plan.name}</strong>
-                <p>{plan.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-        <div className="buzz-panel">
-          <h3>バズ施策</h3>
-          <ul>
-            {buzzIdeas.map((idea) => <li key={idea}>{idea}</li>)}
-          </ul>
-        </div>
-      </section>
 
       <section className="seo-section">
         <div className="answer-box">
